@@ -3,7 +3,7 @@ import{ GameStateContext } from '../Context/GamestateProvider';
 import { GAME_CONFIG } from '../GAME_CONFIG';
 
   const useTapManager = () => {
-    const { tapsLeft, dailyTapCount, setTapsLeft, setDailyTapCount, addGems } = useContext(GameStateContext);
+    const { tapsLeft, dailyTapCount, setTapsLeft, setDailyTapCount, addGems,saveState,saveDailyTapCount } = useContext(GameStateContext);
 
     const handleTap = useCallback(() => {
         if (tapsLeft <= 0) {
@@ -15,6 +15,7 @@ import { GAME_CONFIG } from '../GAME_CONFIG';
             return;
         }
 
+
         const effectiveTaps = 1;
         updateTapState(effectiveTaps);
     }, [tapsLeft, dailyTapCount]);
@@ -23,6 +24,9 @@ import { GAME_CONFIG } from '../GAME_CONFIG';
         setTapsLeft(tapsLeft - effectiveTaps);
         setDailyTapCount(Math.max(0, dailyTapCount - 1));
         addGems(GAME_CONFIG.gemsPerTap * effectiveTaps);
+        saveDailyTapCount( Math.max(0,dailyTapCount - effectiveTaps))
+        saveState();
+        
     }, [tapsLeft, dailyTapCount, addGems]);
 
     return { handleTap };
