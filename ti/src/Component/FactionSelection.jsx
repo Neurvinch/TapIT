@@ -1,4 +1,5 @@
-const FactionSelection = () => (
+const FactionSelection = () => {
+  return (
     <div className="container">
       <h1>CHOOSE YOUR FACTION</h1>
       <div className="factions-container">
@@ -22,6 +23,6 @@ const FactionSelection = () => (
       </button>
     </div>
   );
-  
+}
   export default FactionSelection;
   

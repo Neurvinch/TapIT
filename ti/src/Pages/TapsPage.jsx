@@ -2,12 +2,14 @@ import { useContext } from "react";
 import {GameStateContext }from "../Context/GamestateProvider";
 import  useTapManager  from "../Hooks/useTapManager";
 
+
 const TapsPage = () => {
     const { tapsLeft, totalGems, dailyTapLimit, dailyTapCount, sessionTapCount, resetGame } = useContext( GameStateContext );
     const { handleTap } = useTapManager();
 
     return (
         <>
+        
             <p>Tap to earn gems</p>
             <p>Taps left: {tapsLeft}</p>
             <p>Total gems: {totalGems}</p>

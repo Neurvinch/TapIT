@@ -1,4 +1,5 @@
-const BoostCard = ({ boostName, image, description, price }) => (
+const BoostCard = ({ boostName, image, description, price }) => {
+  return (
     <div className="boost-card" data-boost={boostName}>
       <img src={image} alt={boostName} className="boost-image" />
       <div className="boost-info">
@@ -8,5 +9,5 @@ const BoostCard = ({ boostName, image, description, price }) => (
       </div>
     </div>
   );
-  
+}
   export default BoostCard;

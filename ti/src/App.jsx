@@ -1,12 +1,13 @@
 
 import './App.css'
+
 import {GameStateProvider} from './Context/GamestateProvider'
 import TapsPage from './Pages/TapsPage'
-// import Header from "../src/Component/Header";
+import Header from "../src/Component/Header";
 // import BoostCard from "./Component/BoostCard";
-// import FactionSelection from "./Component/FactionSelection";
+import FactionSelection from "./Component/FactionSelection";
 // import MainContainer from "./Component/MainContainer";
-// import Navbar from "./Component/Navbar";
+import Navbar from "./Component/Navbar";
 
 function App() {
 
@@ -15,11 +16,12 @@ function App() {
     <>
     <GameStateProvider>
       <TapsPage/>
-      {/* <Header/>
-      <BoostCard/>
+      <Header/>
+      {/* <BoostCard/> */}
          <FactionSelection/>
-         <MainContainer/>
-         <Navbar/> */}
+         {/* <MainContainer/> */}
+         <Navbar/>
+        
     </GameStateProvider>
     
     </>

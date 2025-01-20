@@ -1,4 +1,5 @@
-const Header = () => (
+const Header = () =>{ 
+  return (
     <header className="logo-container">
       <div className="header-left">
         <p className="gem-counter">
@@ -19,6 +20,6 @@ const Header = () => (
       </div>
     </header>
   );
-  
+}
   export default Header;
   

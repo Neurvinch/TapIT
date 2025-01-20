@@ -1,4 +1,5 @@
-const MainContainer = () => (
+const MainContainer = () =>{
+  return  (
     <main className="main-container">
       <div className="boosts-grid">
         <BoostCard
@@ -28,5 +29,5 @@ const MainContainer = () => (
       </div>
     </main>
   );
-  
+}
   export default MainContainer;

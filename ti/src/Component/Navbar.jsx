@@ -1,4 +1,5 @@
-const Navbar = () => (
+const Navbar = () => {
+  return(
     <nav className="navbar">
       <a href="profile.html" className="nav-item" data-default-src="img/navbar/Icon2_bw.png" data-active-src="img/navbar/Icon2_color.png">
         <img src="img/navbar/Icon2_bw.png" alt="Profile" />
@@ -14,5 +15,6 @@ const Navbar = () => (
       </a>
     </nav>
   );
+}
 
 export default Navbar
