@@ -1,9 +1,9 @@
-import { useCallback } from 'react';
-import{ useGameState} from '../Context/GamestateProvider';
+import { useCallback, useContext } from 'react';
+import{ GameStateContext } from '../Context/GamestateProvider';
 import { GAME_CONFIG } from '../GAME_CONFIG';
 
- export const useTapManager = () => {
-    const { tapsLeft, dailyTapCount, setTapsLeft, setDailyTapCount, addGems } = useGameState();
+  const useTapManager = () => {
+    const { tapsLeft, dailyTapCount, setTapsLeft, setDailyTapCount, addGems } = useContext(GameStateContext);
 
     const handleTap = useCallback(() => {
         if (tapsLeft <= 0) {
@@ -27,5 +27,6 @@ import { GAME_CONFIG } from '../GAME_CONFIG';
 
     return { handleTap };
 }
+ export default useTapManager;
 
 

@@ -1,6 +1,6 @@
 
 import './App.css'
-import GameStateProvider from './Context/GamestateProvider'
+import {GameStateProvider} from './Context/GamestateProvider'
 import TapsPage from './Pages/TapsPage'
 
 function App() {

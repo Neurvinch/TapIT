@@ -1,8 +1,9 @@
-import {useGameState }from "../Context/GamestateProvider";
-import {useTapManager } from "../Hooks/useTapManager";
+import { useContext } from "react";
+import {GameStateContext }from "../Context/GamestateProvider";
+import  useTapManager  from "../Hooks/useTapManager";
 
 const TapsPage = () => {
-    const { tapsLeft, totalGems, dailyTapLimit, dailyTapCount, sessionTapCount, resetGame } = useGameState();
+    const { tapsLeft, totalGems, dailyTapLimit, dailyTapCount, sessionTapCount, resetGame } = useContext( GameStateContext );
     const { handleTap } = useTapManager();
 
     return (
