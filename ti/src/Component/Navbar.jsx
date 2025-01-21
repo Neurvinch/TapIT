@@ -20,8 +20,8 @@ const Navbar = () => {
       activeSrc: "../public/img/navbar/Icon3_color.png",
     },
     {
-      name: "Taps",
-      path: "/taps",
+      name: "",
+      path: "/",
       defaultSrc: "../public/img/navbar/Icon1_bw.png",
       activeSrc: "../public/img/navbar/Icon1_color.png",
     },

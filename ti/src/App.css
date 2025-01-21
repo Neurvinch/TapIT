@@ -216,6 +216,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -275,8 +276,8 @@ h1 {
   display: flex;
   align-items: center;
   gap: 0.48rem; /* Reduced from 0.5rem */
-  min-height: 96px; /* Reduced from 100px */
-  max-width: 86.4%; /* Reduced from 90% */
+  min-height: 92px; /* Reduced from 100px */
+  max-width: 880px; /* Reduced from 90% */
   position: relative;
 }
 
@@ -287,18 +288,20 @@ h1 {
 }
 
 .boost-info p {
-  font-size: 0.650rem; /* Reduced from 0.9rem */
-  line-height: 1.4;
+  font-size: 0.550rem; /* Reduced from 0.9rem */
+  line-height: 1.2;
   color: #D29EFF;
-  margin: 0.24rem 0; /* Reduced slightly */
+  margin: 0.10rem 0; /* Reduced slightly */
 }
 
 .boost-button {
   position: absolute;
+  margin-right: 10px;
+  margin-bottom: 10px;
   bottom: 4.8px; /* Reduced from 5px */
   right: 4.8px; /* Reduced from 5px */
-  width: 39px; /* Reduced from 50px */
-  height: 30px; /* Reduced from 50px */
+  width: 20px; /* Reduced from 50px */
+  height: 20px; /* Reduced from 50px */
   border-radius: 50%;
   background: #E61791;
   border: 2.88px solid #974DD8; /* Slightly thinner */

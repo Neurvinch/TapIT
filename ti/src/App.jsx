@@ -10,7 +10,7 @@ import ProfilePage from './Pages/ProfilePage';
 
 // Lazy-loaded components for optimization
 const LazyTapsPage = React.lazy(() => import('./Pages/TapsPage'));
-const LazyFactionSelection = React.lazy(() => import('./Component/FactionSelection'));
+// const LazyFactionSelection = React.lazy(() => import('./Component/FactionSelection'));
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
 
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route path="/" element={<LazyFactionSelection />} />
-            <Route path="/taps" element={<LazyTapsPage />} />
+            {/* <Route path="/" element={<LazyFactionSelection />} /> */}
+            <Route path="/" element={<LazyTapsPage />} />
             <Route path="/boosts" element={<BoostPage/>} />
             <Route path="/profile" element={<ProfilePage/>} />
             <Route path="/leaderboard" element={<LeaderBoard/>} />
