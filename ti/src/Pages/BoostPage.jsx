@@ -1,8 +1,11 @@
 import React from 'react'
+import MainContainer from '../Component/MainContainer'
 
 const BoostPage = () => {
   return (
-    <div>BoostPage</div>
+    <div>
+      <MainContainer/>
+    </div>
   )
 }
 

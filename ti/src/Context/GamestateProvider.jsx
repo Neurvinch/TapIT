@@ -47,7 +47,7 @@ export const GameStateProvider = ({ children }) => { // Changed 'Children' to 'c
     },[dailyTapLimit])
 
 
-    const regenratetaps = useCallback( () =>{
+    const regenerateTaps = useCallback( () =>{
         const currentTime = Date.now();
         const ElapsedTime = currentTime - lastRegenTime;
         const tapsToRegen = Math.floor(ElapsedTime / GAME_CONFIG.tapRegenInterval)
@@ -100,7 +100,9 @@ export const GameStateProvider = ({ children }) => { // Changed 'Children' to 'c
             resetGame,
             setTapsLeft,
             setDailyTapCount,
-            saveState,saveDailyTapCount
+            saveState,saveDailyTapCount,
+            regenerateTaps,
+            resetDailyTaps
         }}>
             {children} {/* Ensure children are rendered */}
         </GameStateContext.Provider>

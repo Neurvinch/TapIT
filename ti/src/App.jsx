@@ -1,31 +1,32 @@
+import './App.css';
+import { GameStateProvider } from './Context/GamestateProvider';
 
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import BoostPage from './Pages/BoostPage';
 
-import {GameStateProvider} from './Context/GamestateProvider'
-import TapsPage from './Pages/TapsPage'
-import Header from "../src/Component/Header";
-// import BoostCard from "./Component/BoostCard";
-import FactionSelection from "./Component/FactionSelection";
-// import MainContainer from "./Component/MainContainer";
-import Navbar from "./Component/Navbar";
+
+// Lazy-loaded components for optimization
+const LazyTapsPage = React.lazy(() => import('./Pages/TapsPage'));
+const LazyFactionSelection = React.lazy(() => import('./Component/FactionSelection'));
 
 function App() {
-
-
   return (
-    <>
     <GameStateProvider>
-      <TapsPage/>
-      <Header/>
-      {/* <BoostCard/> */}
-         <FactionSelection/>
-         {/* <MainContainer/> */}
-         <Navbar/>
-        
-    </GameStateProvider>
     
-    </>
-  )
+      <Router>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<LazyFactionSelection />} />
+            <Route path="/taps" element={<LazyTapsPage />} />
+            <Route path="/boosts" element={<BoostPage/>} />
+            <Route path="*" element={<div>404 - Page Not Found</div>} /> {/* Fallback route */}
+          </Routes>
+        </Suspense>
+      </Router>
+    </GameStateProvider>
+  );
 }
 
-export default App
+export default App;

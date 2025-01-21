@@ -1,3 +1,4 @@
+
 const BoostCard = ({ boostName, image, description, price }) => {
   return (
     <div className="boost-card" data-boost={boostName}>
