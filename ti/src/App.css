@@ -39,7 +39,7 @@ h1 {
 
 .navbar {
   position: fixed;
-  bottom: 30px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -110,7 +110,8 @@ h1 {
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, #6F32CE 0%, #381968 50%, #200C3E 70%, #200C3E 100%);
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto ; 
+  
   outline: 10px solid;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;

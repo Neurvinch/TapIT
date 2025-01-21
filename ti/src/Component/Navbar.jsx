@@ -46,7 +46,7 @@ const Navbar = () => {
   // Update active item based on the current route
   useEffect(() => {
     const currentPath = location.pathname.split("/").pop();
-    setActiveItem(currentPath || "profile"); // Default to "profile"
+    setActiveItem(currentPath || "/"); // Default to "profile"
     setUpTheme();
   }, [location]);
 
