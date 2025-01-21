@@ -220,8 +220,8 @@ h1 {
 }
 
 .boost-image {
-  width: 100%;
-  height: auto;
+  width: 74px;
+  height: 79px;
   border-radius: 50%;
   z-index: 10;
 }
@@ -259,32 +259,63 @@ h1 {
 
 .boosts-grid {
   display: grid;
-  gap: 0.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 0.48rem; /* Reduced from 0.5rem */
+  max-width: 580px; /* Reduced from 500px */
+  margin: 19.2px; /* Reduced from 20px */
+  padding: 57.6px; /* Reduced from 60px */
+  height: 67.2px; /* Reduced from 70px */
   justify-items: center;
 }
 
 .boost-card {
   background: #381968;
-  border: 3px solid #974DD8;
-  border-radius: 30px;
-  padding: 0.5rem;
+  border: 2.88px solid #974DD8; /* Slightly thinner */
+  border-radius: 28.8px; /* Reduced from 30px */
+  padding: 0.48rem; /* Reduced from 0.5rem */
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  min-height: 110px;
-  max-width: 90%;
+  gap: 0.48rem; /* Reduced from 0.5rem */
+  min-height: 96px; /* Reduced from 100px */
+  max-width: 86.4%; /* Reduced from 90% */
   position: relative;
 }
 
 .boost-info {
   flex: 1;
-  padding-right: 60px;
+  padding-right: 57.6px; /* Reduced from 60px */
   color: white;
 }
 
 .boost-info p {
-  font-size: 0.9rem;
+  font-size: 0.650rem; /* Reduced from 0.9rem */
   line-height: 1.4;
+  color: #D29EFF;
+  margin: 0.24rem 0; /* Reduced slightly */
 }
+
+.boost-button {
+  position: absolute;
+  bottom: 4.8px; /* Reduced from 5px */
+  right: 4.8px; /* Reduced from 5px */
+  width: 39px; /* Reduced from 50px */
+  height: 30px; /* Reduced from 50px */
+  border-radius: 50%;
+  background: #E61791;
+  border: 2.88px solid #974DD8; /* Slightly thinner */
+  color: white;
+  font-size: 1.4rem; /* Reduced from 2.5rem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+
+
+.boost-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

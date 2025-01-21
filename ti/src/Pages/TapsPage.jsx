@@ -1,67 +1,3 @@
-// import { useContext } from "react";
-// import {GameStateContext }from "../Context/GamestateProvider";
-// import  useTapManager  from "../Hooks/useTapManager";
-// import Header from "../Component/Header";
-// import Navbar from "../Component/Navbar";
-
-// const TapsPage = () => {
-//     const { tapsLeft, totalGems, dailyTapLimit, dailyTapCount, sessionTapCount, resetGame } = useContext( GameStateContext );
-//     const { handleTap ,endTapSeries,
-//         resetTapSeries,
-//         createTapEffects,
-//         circleImage,
-//     tapCircleRef } = useTapManager();
-
-//     return (
-//         <>
-//             <h1>Taps Page</h1>
-
-//             <div
-//            id='tapCircle'
-//            ref={tapCircleRef}
-//            onClick={handleTap}
-//            style={{
-//             width:'200px',
-//             height:'200px',
-//             borderRadius:'50%',
-//            // backgroundColor: `url(${circleImage}) no-repeat center/contain`,
-//            }}
-        
-//         >
-//              <img src={circleImage} alt="" />
-//         </div>
-//         <canvas 
-//          id='particleCanvas' 
-//          style={{
-//             width: '100%',
-//             height: '100%',
-
-//          }}
-//         />
-// <Header/>
-//             <p>Tap to earn gems</p>
-//             <p>Taps left: {tapsLeft}</p>
-//             <p>Total gems: {totalGems}</p>
-//             <p>Daily tap limit: {dailyTapLimit}</p>
-//             <p>Daily tap count: {dailyTapCount}</p>
-//             <p>Session tap count: {sessionTapCount}</p>
-//             <button onClick={handleTap}>Tap</button>
-//             <button onClick={resetGame}>Reset Game</button>
-//             <Navbar/>
-//         </>
-//     );
-// }
-
-// export default TapsPage;
-
-
-
-
-
-
-
-
-
 
 import { useContext } from "react";
 import { GameStateContext } from "../Context/GamestateProvider";
@@ -90,27 +26,7 @@ const TapsPage = () => {
 
   return (
     <>
-      <header className="logo-container">
-        <div className="header-left">
-          <p className="gem-counter">
-            <span className="gemCount gem-counter" id="gemCount">{totalGems.toFixed(3)}</span>
-            <br />
-            GEMS
-          </p>
-        </div>
-
-        <div className="header-center">
-          <img src="../public/img/logo.png" alt="Logo" className="logo" />
-        </div>
-
-        <div className="header-right">
-          <p className="leaderboard_counter">
-            <span className="leaderboardcounter leaderboard_counter" id="leaderboardcount"></span>
-            <br />
-            Leaderboard
-          </p>
-        </div>
-      </header>
+      <Header/>
 
      
           <canvas id="particleCanvas"></canvas>
@@ -155,7 +71,7 @@ const TapsPage = () => {
             />
           </div>
       
-      <Header />
+     
 
       
 

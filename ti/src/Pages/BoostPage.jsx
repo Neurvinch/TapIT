@@ -1,10 +1,15 @@
 import React from 'react'
-import MainContainer from '../Component/MainContainer'
+
+import BoostCard from '../Component/BoostCard'
+import Navbar from '../Component/Navbar'
+import Header from '../Component/Header'
 
 const BoostPage = () => {
   return (
     <div>
-      <MainContainer/>
+      <Header/>
+     <BoostCard />
+     <Navbar/>
     </div>
   )
 }
